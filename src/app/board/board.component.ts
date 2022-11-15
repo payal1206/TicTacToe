@@ -12,7 +12,7 @@ export class BoardComponent implements OnInit {
 
 
   constructor() {
-    this.winner = null;
+    this.winner = 'a';
     this.xIsNext = true;
     this.squares = Array(9).fill(null);
    }
@@ -22,7 +22,7 @@ export class BoardComponent implements OnInit {
   }
   newGame(){
     this.squares = Array(9).fill(null);
-    this.winner = null;
+    this.winner = 'a';
     this.xIsNext = true;
   }
   get player() {
@@ -57,6 +57,6 @@ export class BoardComponent implements OnInit {
         return this.squares[a];
       }
     }
-    return null;
+    return 'a';
   }
 }
